@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {1BD87967-B278-49AB-BD03-7DCF4D7F8160} = s 'Soma Class'
+		{
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{603E31E3-CBA8-4E3E-8502-7741CA44EA9E}'
+			Version = s '1.0'
+		}
+	}
+}

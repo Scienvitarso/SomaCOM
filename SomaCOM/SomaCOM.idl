@@ -8,11 +8,29 @@ import "oaidl.idl";
 import "ocidl.idl";
 
 [
+	object,
+	uuid(98CF57D2-BBA3-4457-A216-81108186E878),
+	pointer_default(unique)
+]
+interface ISoma : IUnknown{
+
+	HRESULT setPrimeiroValor(int valor);
+	HRESULT setSegundoValor(int valor);
+	HRESULT getSoma([out, retval]int *soma);
+};
+[
 	uuid(603E31E3-CBA8-4E3E-8502-7741CA44EA9E),
 	version(1.0),
 ]
 library SomaCOMLib
 {
 	importlib("stdole2.tlb");
+	[
+		uuid(1BD87967-B278-49AB-BD03-7DCF4D7F8160)		
+	]
+	coclass Soma
+	{
+		[default] interface ISoma;
+	};
 };
 
