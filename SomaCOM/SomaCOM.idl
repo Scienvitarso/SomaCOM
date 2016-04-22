@@ -1,0 +1,18 @@
+// SomaCOM.idl : IDL source for SomaCOM
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SomaCOM.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(603E31E3-CBA8-4E3E-8502-7741CA44EA9E),
+	version(1.0),
+]
+library SomaCOMLib
+{
+	importlib("stdole2.tlb");
+};
+
